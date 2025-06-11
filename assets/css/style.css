@@ -8984,3 +8984,26 @@ li:last-child::after {
   display: none;
 }
 
+
+.sticker {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #ff3c3c;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+  z-index: 10;
+  transition: transform 0.3s ease;
+}
+
+.sticker:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
