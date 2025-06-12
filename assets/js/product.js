@@ -240,17 +240,17 @@ const products = [
     ]
   },
   {
-    name: "Mixed Dry Fruits",
+    name: "Dry Fruits Biscuit",
     newprice: 100.00,
     oldprice: 100.00,
     title: "A healthy mix of assorted dry fruits and nuts packed with flavor.",
-    description: "This delightful blend includes a variety of premium dry fruits and nuts, perfect for gifting, snacking, or adding to festive recipes. Tasty and nutritious in every handful.",
+    description: "This delightful blend includes a variety of premium dry fruits and nuts, perfect for gifting, snacking, or adding to festive recipes with tasty and nutritious in every handful.",
     image: "./assets/images/resource/products/dryfruits.JPG",
     specification: [
-      "Flavor: Mixed Nuts",
+      "Flavor: Dry fruits Nuts",
       "Weight: 400g",
       "Shelf Life: 6 months",
-      "Ingredients: Mixed dry fruits and nuts",
+      "Ingredients: Almond, Cashew Nuts & Ghee, Atta",
       "Storage: Keep in airtight jar; avoid moisture"
     ]
   },
@@ -555,7 +555,7 @@ const products = [
     ]
   },
   {
-    name: "Strawberry 1kg",
+    name: "Strawberry Biscuit",
     newprice: 100.00,
     oldprice: 100.00,
     title: "Sweet strawberry flavored biscuits that melt in your mouth.",
@@ -563,7 +563,7 @@ const products = [
     image: "./assets/images/resource/products/straberry.jpg",
     specification: [
       "Flavor: Strawberry",
-      "Weight: 1kg",
+      "Weight: 200gm",
       "Shelf Life: 2 months",
       "Ingredients: Strawberry essence, flour, sugar, butter",
       "Storage: Keep in a cool dry place"
