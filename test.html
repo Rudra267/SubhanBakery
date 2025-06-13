@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>3D Tilt on Mouse Move</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* Background video */
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .overlay {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      perspective: 1000px; /* Enables 3D effect */
+    }
+
+    .content-box {
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 700px;
+      text-align: center;
+      transform-style: preserve-3d;
+      transition: transform 0.1s ease;
+      will-change: transform;
+    }
+
+    .content-box h2 {
+      font-size: 36px;
+      color: #f9b233;
+      margin-bottom: 20px;
+    }
+
+    .content-box p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Video -->
+  <video class="video-background" autoplay muted loop>
+    <source src="./1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Overlay with 3D Tilt -->
+  <div class="overlay">
+    <div class="content-box" id="tiltBox">
+      <h2>Some Words About Us & Our Food</h2>
+      <p>
+        Subhan Bakery is more than just a bakery—it’s a name built on trust, taste, and tradition.
+        Since our inception, we've been committed to delivering exceptional baked goods that blend
+        timeless recipes with modern creativity.
+      </p>
+    </div>
+  </div>
+
+  <!-- Tilt Script -->
+  <script>
+    const box = document.getElementById('tiltBox');
+
+    document.addEventListener('mousemove', (e) => {
+      const { innerWidth: width, innerHeight: height } = window;
+      const x = (e.clientX / width - 0.5) * 30; // Tilt range
+      const y = (e.clientY / height - 0.5) * -30;
+      box.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+    });
+
+    document.addEventListener('mouseleave', () => {
+      box.style.transform = `rotateY(0deg) rotateX(0deg)`;
+    });
+  </script>
+
+</body>
+</html>

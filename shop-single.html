@@ -50,11 +50,10 @@
 					</div>
 					<div class="top-right clearfix">
 
-						<!--Social Box-->
-						<ul class="social-box">
+					<ul class="social-box">
 							<li><a href="https://www.facebook.com/sharer/sharer.php?u=https://www.subhanbakery.in"><span class="fab fa-facebook-f"></span></a></li>
-							<li><a href="https://x.com/intent/post?text=checkout%20the%20url&url=https%3A%2F%2Fwww.subhanbakery.in"><span class="fab fa-twitter"></span></a></li>
-							<li><a href="mailto:info@subhanbakery.com"><span class="fab fa-google-plus-g"></span></a></li>
+							<li><a href="https://x.com/intent/post?text=checkout%20the%20url&url=https%3A%2F%2Fwww.subhanbakery.in"><i class="fa-brands fa-x-twitter"></i></a></li>
+							<script src="https://kit.fontawesome.com/b4564537dc.js" crossorigin="anonymous"></script>
 							<li><a href="https://www.linkedin.com/feed/?linkOrigin=LI_BADGE&shareActive=true&shareUrl=https%3A%2F%2Fwww.subhanbakery.in"><span class="fab fa-linkedin-in"></span></a></li>
 						</ul>
 						
@@ -552,36 +551,40 @@
     <!--Scroll to top-->
     <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
 
-    <!-- Search Popup -->
-    <div id="search-popup" class="search-popup">
-        <div class="close-search theme-btn"><span class="fas fa-window-close"></span></div>
-        <div class="popup-inner">
-            <div class="overlay-layer"></div>
-            <div class="search-form">
-                <form method="post" action="https://designarc.biz/demos/wendgo/index.html">
-                    <div class="form-group">
-                        <fieldset>
-                            <input type="search" class="form-control" name="search-input" value=""
-                                placeholder="Search Here" required>
-                            <input type="submit" value="Search Now!" class="theme-btn">
-                        </fieldset>
-                    </div>
-                </form>
+<script>
+	function updateBakeryStatus() {
+  const statusElement = document.getElementById("bakeryStatus");
 
-                <br>
-                <h3>Recent Search Keywords</h3>
-                <ul class="recent-searches">
-                    <li><a href="#">Cake</a></li>
-                    <li><a href="#">Chocolate</a></li>
-                    <li><a href="#">Strawberry</a></li>
-                    <li><a href="#">Vanila</a></li>
-                    <li><a href="#">Mango Icecream</a></li>
-                </ul>
+  // Get current time in Kolkata timezone
+  const now = new Date().toLocaleString("en-US", { timeZone: "Asia/Kolkata" });
+  const kolkataTime = new Date(now);
+  const hours = kolkataTime.getHours();
+  const minutes = kolkataTime.getMinutes();
 
-            </div>
+  // Convert current time to total minutes since midnight
+  const totalMinutes = hours * 60 + minutes;
 
-        </div>
-    </div>
+  // Define open and close times in total minutes
+  const openTime = 10 * 60;        // 10:00 AM = 600 minutes
+  const closeTime = 22 * 60 + 30;  // 10:30 PM = 1350 minutes
+
+  if (totalMinutes >= openTime && totalMinutes < closeTime) {
+    statusElement.textContent = "Bakery is Open";
+    statusElement.style.color = "green";
+  } else {
+    statusElement.textContent = "Bakery is closed. Open tomorrow at 10:00 AM";
+    statusElement.style.color = "red";
+  }
+}
+
+// Run on load
+updateBakeryStatus();
+
+// Optional: Update every minute
+setInterval(updateBakeryStatus, 60 * 1000);
+
+</script>
+
 
     <script src="./assets/js/product.js"></script>
 

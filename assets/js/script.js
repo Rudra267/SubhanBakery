@@ -695,3 +695,37 @@
     handlePreloader();
   });
 })(window.jQuery);
+
+
+
+// review
+
+
+      const testimonials = document.querySelectorAll('.testimonial');
+    const dots = document.querySelectorAll('.dot');
+    let index = 0;
+
+    function showTestimonial(i) {
+      testimonials.forEach((testimonial, idx) => {
+        testimonial.classList.remove('active');
+        dots[idx].classList.remove('active');
+        if (idx === i) {
+          testimonial.classList.add('active');
+          dots[idx].classList.add('active');
+        }
+      });
+    }
+
+    function nextTestimonial() {
+      index = (index + 1) % testimonials.length;
+      showTestimonial(index);
+    }
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        index = i;
+        showTestimonial(index);
+      });
+    });
+
+    setInterval(nextTestimonial, 4000); // Auto-slide every 4 seconds
