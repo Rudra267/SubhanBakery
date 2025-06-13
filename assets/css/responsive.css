@@ -449,6 +449,12 @@
 }
 
 @media only screen and (max-width: 767px) {
+  .video-section-about .content{
+    width: 100% !important;
+    height: 100% !important;
+    background: transparent !important;
+  }
+
   .main-header .header-top .top-right {
     display: none;
   }
@@ -868,7 +874,7 @@
   }
 
   .video-section {
-    padding: 100px 0px;
+    padding: 57px 0px;
   }
 
   .testimonial-block-two .inner-box {
@@ -1153,6 +1159,9 @@
   }
 }
 @media (max-width: 480px) {
+  .video-section-about .content h2{
+    font-size: 7vw;
+  }
   .main_slider_area .food_text span {
     margin-bottom: -22px !important;
   }
@@ -1318,4 +1327,17 @@
   .cart-section .cart-options {
     padding: 20px 20px;
   }
+
+
+}
+
+@media (max-width:500px){
+  .offer{
+    font-size: 17px !important;
+  }
+  .sticker{
+    font-size: 11px;
+  }
+
+
 }
