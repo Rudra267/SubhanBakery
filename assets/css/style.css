@@ -8211,7 +8211,7 @@ li:last-child::after {
 .cat-list li a {
   background-color: #0d98ba;
   position: relative;
-  color: #d6d6d6;
+  color: #ebebeb;
   font-size: 16px;
   font-weight: 600;
   padding: 12px;
@@ -9077,12 +9077,29 @@ opacity: 0.3;
   font-weight: 700;
   color: #26b328;
   font-size: 20px;
+  position: relative;
 }
+
+.price-drop-tag {
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 10px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+/* .price-drop-tag::before{
+  
+content: "🏷️";} */
 
 .old-price {
   text-decoration: line-through;
   color: #888;
   font-size: 16px;
+  display: none;
 }
 
 .info-list li:first-child {
