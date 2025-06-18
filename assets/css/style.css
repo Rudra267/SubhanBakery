@@ -511,7 +511,7 @@ li {
   padding: 12px 46px 12px;
   font-weight: 400;
   overflow: hidden;
-  background: #a41a13;
+  background: #0d9994;
   border-radius: 0px;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
@@ -994,7 +994,7 @@ img {
   z-index: 5;
   -webkit-transition: all 600ms ease;
   transition: all 600ms ease;
-  background-color: #a40301;
+  background-color: #0d9994;
 }
 
 .main-header .header-upper:before {
@@ -1005,6 +1005,7 @@ img {
   height: 18px;
   bottom: -18px;
   background: url(../images/icons/header-layer.png) repeat-x;
+  background-size: contain;
   -webkit-animation: 10s linear 0s infinite normal none running slide-two;
           animation: 10s linear 0s infinite normal none running slide-two;
 }
@@ -1158,7 +1159,7 @@ img {
   z-index: 100;
   opacity: 1;
   text-align: left;
-  background: #9f0301;
+  background: #0d9994;
   -webkit-transform: translateY(30px);
   transform: translateY(30px);
   border-top: 3px solid #eec300;
@@ -1210,8 +1211,8 @@ img {
 }
 
 .main-menu .navigation > li > ul > li:hover > a {
-  color: #242424;
-  background-color: #eec300;
+  color: #ccc135;
+  background-color: #077875;
 }
 
 .main-menu .navigation > li > ul > li > ul {
@@ -1409,7 +1410,7 @@ img {
   width: 100%;
   padding: 0px 0px;
   z-index: -1;
-  background: #ffffff;
+  background: #0d9994;
   -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   -ms-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   -o-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -1429,7 +1430,7 @@ img {
 }
 
 .fixed-header .sticky-header .logo a img{
-  width: 100px;
+  width: 135px;
 }
 
 .sticky-header .main-menu .navigation > li {
@@ -1450,10 +1451,10 @@ img {
 
 .sticky-header .main-menu .navigation > li > a {
   padding: 23px 15px !important;
-  line-height: 30px;
-  font-size: 16px;
+  line-height: 55px;
+  font-size: 17px;
   font-weight: 500;
-  color: #222222;
+  color: #f9f7f7;
   text-transform: capitalize;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
@@ -2470,7 +2471,7 @@ img {
 .delivery-section {
   position: relative;
   padding: 40px 0px 50px;
-  background-color: #a41a13;
+  background-color: #0d98ba;
 }
 
 .delivery-section .side-image {
@@ -4620,6 +4621,7 @@ img {
   text-align: center;
   padding: 90px 0px 75px;
   background-size: cover;
+  background: #0d98ba;
 }
 
 .page-title h1 {
@@ -6487,10 +6489,12 @@ img {
 
 ***/
 .contact-page-title {
+  overflow: hidden;
   position: relative;
   padding: 195px 0px 190px;
   background-size: cover;
   background-position: center center;
+  background-color: #0d98ba;
 }
 
 .contact-page-title h1 {
@@ -8205,9 +8209,9 @@ li:last-child::after {
 }
 
 .cat-list li a {
-  background-color: #FDD835;
+  background-color: #0d98ba;
   position: relative;
-  color: #757575;
+  color: #d6d6d6;
   font-size: 16px;
   font-weight: 600;
   padding: 12px;
@@ -8236,7 +8240,7 @@ li:last-child::after {
 }
 
 .cat-list li a:hover {
-  color: #a41a13;
+  color: #cccccc;
 }
 
 .cat-list li:last-child a {
@@ -8248,8 +8252,8 @@ li:last-child::after {
 }
 
 .active-cat-list{
-  background-color: #FFC000 !important;
-   color: #a41a13 !important;
+  background-color: #187a8f !important;
+   color: #cccccc !important;
 }
 
 /* Post Widget */
@@ -8782,9 +8786,10 @@ li:last-child::after {
     Home Slider css
 ==================================================================== ***/
 .main_slider_area.slider_bg {
-  background: url(../images/main-slider/slider-bg.jpg) no-repeat scroll center center;
+  /* background: url(../images/main-slider/slider-bg.jpg) no-repeat scroll center center; */
   background-size: cover;
   position: relative;
+  background: #0d98ba;
 }
 .image-bg{
 position: absolute;
@@ -9115,13 +9120,15 @@ opacity: 0.3;
 
 .menu {
     /* background:url(../../7.png); */
+    position: relative;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 4em 2rem;
     position: relative;
-    perspective: 1000px; /
+    perspective: 1000px;
+    background: #0d98ba;
 }
 
 .menu-grid {
@@ -9235,7 +9242,7 @@ opacity: 0.3;
 /* Background decorative elements */
 .bg-decoration {
     position: absolute;
-    opacity: 0.16;
+    opacity: 0.09;
     pointer-events: none;
 }
 
@@ -9537,4 +9544,12 @@ opacity: 0.3;
       .video-section-about .content p {
         font-size: 1rem;
       }
+    }
+    
+    .cmt-div{
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+     
     }

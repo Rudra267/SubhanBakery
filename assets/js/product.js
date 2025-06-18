@@ -766,7 +766,7 @@ const filterProduct = (data) => {
   desc.textContent = product.description;
 
   title.forEach(element => {
-    element.textContent = product.title;
+    element.textContent = product.description;
   });
 
   imageTag.setAttribute('src', `${product.image}`);
